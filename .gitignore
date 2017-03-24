@@ -2,3 +2,5 @@ Private/
 /Projects/P1_ExtendedKalmanFilter/*.zip
 /Misc/.ipynb_checkpoints
 
+*.
+*.out
