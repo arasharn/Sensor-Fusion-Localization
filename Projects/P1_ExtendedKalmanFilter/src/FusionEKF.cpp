@@ -29,7 +29,7 @@ FusionEKF::FusionEKF() {
 
   //measurement covariance matrix - radar
   R_radar_ << 0.01, 0, 0,
-        0, 5.E-7, 0,
+        0, 1.E-7, 0,
         0, 0, 0.01;
 
   Hj_ << 1, 1, 0, 0,
@@ -117,16 +117,23 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
    previous_timestamp_ = measurement_pack.timestamp_;
 
    // Modify the F matrix so that the time is integrated
- 	ekf_.F_(0, 2) = dt;
- 	ekf_.F_(1, 3) = dt;
- 	//2. Set the process covariance matrix Q
- 	ekf_.Q_ = MatrixXd(4, 4);
- 	ekf_.Q_ <<  pow(dt,4.)/4*noise_ax, 0, pow(dt,3.)/2*noise_ax, 0,
- 			 			 0, pow(dt,4.)/4*noise_ay, 0, pow(dt,3.)/2*noise_ay,
- 			       pow(dt,3.)/2*noise_ax, 0, pow(dt,2.)*noise_ax, 0,
- 			       0, pow(dt,3.)/2*noise_ay, 0, pow(dt,2.)*noise_ay;
+   float dt_2 = dt * dt;
+   float dt_3 = dt_2 * dt;
+   float dt_4 = dt_3 * dt;
+
+   //Modify the F matrix so that the time is integrated
+   ekf_.F_(0, 2) = dt;
+   ekf_.F_(1, 3) = dt;
+
+   // Update the process noise covariance matrix.
+   //set the process covariance matrix Q
+   ekf_.Q_ = MatrixXd(4, 4);
+   ekf_.Q_ <<  dt_4/4*noise_ax, 0, dt_3/2*noise_ax, 0,
+               0, dt_4/4*noise_ay, 0, dt_3/2*noise_ay,
+               dt_3/2*noise_ax, 0, dt_2*noise_ax, 0,
+               0, dt_3/2*noise_ay, 0, dt_2*noise_ay;
  	// Call the Kalman Filter predict() function
-  ekf_.Predict();
+   ekf_.Predict();
 
   /*****************************************************************************
    *  Update
