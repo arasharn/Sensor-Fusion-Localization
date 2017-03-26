@@ -9,9 +9,6 @@
 #include "kalman_filter.h"
 #include "tools.h"
 
-using Eigen::MatrixXd;
-using Eigen::VectorXd;
-
 class FusionEKF {
 public:
   /**
@@ -37,7 +34,7 @@ public:
 private:
   // noise
   long noise_ax, noise_ay;
-
+  
   // check whether the tracking toolbox was initiallized or not (first measurement)
   bool is_initialized_;
 

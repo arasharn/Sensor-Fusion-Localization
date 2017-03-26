@@ -1,7 +1,5 @@
 #include "kalman_filter.h"
-#include <math.h>
 
-using namespace std;
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
 
@@ -50,21 +48,18 @@ void KalmanFilter::Update(const VectorXd &z) {
 }
 
 void KalmanFilter::UpdateEKF(const VectorXd &z) {
-  double px = x_[0];
-  double py = x_[1];
-  double vx = x_[2];
-  double vy = x_[3];
-  //
-  double rho = sqrt(px*px + py*py);
-  double phi;
-  double rho_dot;
-  if (fabs(rho) > 0.0001) {
-    phi = atan2(py,px);
-    rho_dot = (px*vx + py*vy) / rho;
+  double range = sqrt( pow(x_[0],2) + pow(x_[1],2) );
+  double bearing;
+  double range_rate;
+  if (fabs(range) > 0.0001) {
+    bearing = atan2(x_[1] , x_[0]);
+    range_rate = ((x_[0] * x_[2] + x_[1] * x_[3]) / range);
+  
+    MatrixXd z_pred(3, 1);
 
-    VectorXd z_pred(3);
-    z_pred << rho, phi, rho_dot;
+    z_pred << range, bearing, range_rate;
 
+    //VectorXd y = z - H_ * x_;
     VectorXd y = z - z_pred;
     MatrixXd Ht = H_.transpose();
     MatrixXd S = H_ * P_ * Ht + R_;
@@ -72,10 +67,9 @@ void KalmanFilter::UpdateEKF(const VectorXd &z) {
     MatrixXd PHt = P_ * Ht;
     MatrixXd K = PHt * Si;
 
-  //new estimate
     x_ = x_ + (K * y);
     long x_size = x_.size();
     MatrixXd I = MatrixXd::Identity(x_size, x_size);
     P_ = (I - K * H_) * P_;
-  }
+  }  
 }
