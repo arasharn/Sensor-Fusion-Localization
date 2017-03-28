@@ -24,13 +24,13 @@ FusionEKF::FusionEKF() {
   Hj_ = MatrixXd(3, 4);
 
   //measurement covariance matrix - laser
-  R_laser_ << 0.0001, 0,
-              0, 0.0001;
+  R_laser_ << 1.E-2, 0,
+              0, 4.E-2;
 
   //measurement covariance matrix - radar
-  R_radar_ << 0.01, 0, 0,
-        0, 1.E-7, 0,
-        0, 0, 0.01;
+  R_radar_ << 1.E-2, 0, 0,
+              0, 1.E-5, 0,
+              0, 0, 1.E-3;
 
   Hj_ << 1, 1, 0, 0,
          1, 1, 0, 0,
@@ -51,8 +51,8 @@ FusionEKF::FusionEKF() {
         0, 0, 1000, 0,
         0, 0, 0, 1000;
 // Set the acceleration noise components
-  noise_ax = 25;
-  noise_ay = 25;
+  noise_ax = 10;
+  noise_ay = 10;
 }
 
 /**
