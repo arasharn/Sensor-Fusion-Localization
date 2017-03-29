@@ -4,6 +4,9 @@
 
 [image1]: ./Dataset1.jpg "Dataset1"
 [image2]: ./Dataset2.jpg "Dataset2"
+[image3]: ./Velocity_Dataset1.jpg "Velocity_Dataset1"
+[image4]: ./Velocity_Dataset2.jpg "Velocity_Dataset2"
+
 ## Dependencies
 
 * cmake >= 3.5
@@ -58,3 +61,8 @@ Here are the plots for estimated positions using the designed extended Kalman fi
 
 ![alt text][image1]
 ![alt text][image2]
+
+Here are the plots for estimated velocities using the designed EKF versus the ground truth correspondences:
+
+![alt text][image3]
+![alt text][image4]
