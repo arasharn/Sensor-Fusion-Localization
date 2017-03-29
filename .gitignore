@@ -6,3 +6,4 @@ Private/
 *.out
 Projects/P1_ExtendedKalmanFilter/.ipynb_checkpoints
 FusionEKF_data1.cpp
+Projects/P1_ExtendedKalmanFilter/kalman_tracker_mac.app/*
