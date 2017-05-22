@@ -48,15 +48,18 @@ void KalmanFilter::Update(const VectorXd &z) {
 }
 
 void KalmanFilter::UpdateEKF(const VectorXd &z) {
-  double range = sqrt( pow(x_[0],2) + pow(x_[1],2) );
+  double range = sqrt( x_[0]*x_[0] + x_[1]*x_[1] );
   double bearing;
   double range_rate;
-  if (fabs(range) > 0.0001) {
+  if (fabs(range) > 0.001) {
     bearing = atan2(x_[1] , x_[0]);
     range_rate = ((x_[0] * x_[2] + x_[1] * x_[3]) / range);
-  
+  }
+  else{
+    bearing = 0;
+    range_rate = 0;
+  }
     MatrixXd z_pred(3, 1);
-
     z_pred << range, bearing, range_rate;
 
     //VectorXd y = z - H_ * x_;
@@ -71,5 +74,4 @@ void KalmanFilter::UpdateEKF(const VectorXd &z) {
     long x_size = x_.size();
     MatrixXd I = MatrixXd::Identity(x_size, x_size);
     P_ = (I - K * H_) * P_;
-  }  
-}
+  }
