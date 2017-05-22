@@ -2,10 +2,10 @@
 ---
 [//]: # (Image References)
 
-[image1]: ./Dataset1.jpg "Dataset1"
-[image2]: ./Dataset2.jpg "Dataset2"
-[image3]: ./Velocity_Dataset1.jpg "Velocity_Dataset1"
-[image4]: ./Velocity_Dataset2.jpg "Velocity_Dataset2"
+[image1]: ./Dataset1 "Dataset1"
+[image2]: ./Dataset2 "Dataset2"
+[image3]: ./Velocity_Dataset1 "Velocity_Dataset1"
+[image4]: ./Velocity_Dataset2 "Velocity_Dataset2"
 
 ## Dependencies
 
@@ -41,18 +41,18 @@ cmake .. && make
 There are two datasets for which I obtained the following RMSE accuracies for x, y, vx, vy:
 
 ### Dataset1 RMSE (sample-laser-radar-measurement-data-1.txt)
-| x   | 0.0338739 |
+| x   | 0.0636 |
 |-----|-----------|
-| y   | 0.0282302 |
-| v_x | 0.351881  |
-| v_y | 0.382045  |
+| y   | 0.0580 |
+| v_x | 0.5305  |
+| v_y | 0.5366  |
 
 ### Dataset2 RMSE (sample-laser-radar-measurement-data-2.txt)
-| x   | 0.181897 |
+| x   | 0.185606 |
 |-----|----------|
-| y   | 0.17303  |
-| v_x | 0.434546 |
-| v_y | 0.719889 |
+| y   | 0.190384 |
+| v_x | 0.481424 |
+| v_y | 0.837671 |
 
 ## Visualizing Results
 The python code is provided for the following figures in **KalmanFilter_Visualization.ipynb** file.
