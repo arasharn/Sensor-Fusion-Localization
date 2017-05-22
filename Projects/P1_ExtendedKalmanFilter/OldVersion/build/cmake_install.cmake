@@ -1,4 +1,4 @@
-# Install script for directory: /Users/sayna/Dropbox/Udacity/Term2_SDCND/Projects/P1_ExtendedKalmanFilter
+# Install script for directory: /Users/sayna/Dropbox/Udacity/Term2_SDCND/Projects/P1_ExtendedKalmanFilter/OldVersion
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/sayna/Dropbox/Udacity/Term2_SDCND/Projects/P1_ExtendedKalmanFilter/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/sayna/Dropbox/Udacity/Term2_SDCND/Projects/P1_ExtendedKalmanFilter/OldVersion/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
