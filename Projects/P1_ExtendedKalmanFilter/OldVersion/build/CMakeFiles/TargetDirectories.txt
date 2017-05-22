@@ -1,3 +1,0 @@
-/Users/sayna/Dropbox/Udacity/Term2_SDCND/Projects/P1_ExtendedKalmanFilter/OldVersion/build/CMakeFiles/edit_cache.dir
-/Users/sayna/Dropbox/Udacity/Term2_SDCND/Projects/P1_ExtendedKalmanFilter/OldVersion/build/CMakeFiles/rebuild_cache.dir
-/Users/sayna/Dropbox/Udacity/Term2_SDCND/Projects/P1_ExtendedKalmanFilter/OldVersion/build/CMakeFiles/ExtendedKF.dir
