@@ -5,5 +5,5 @@ Private/
 *.
 *.out
 Projects/P1_ExtendedKalmanFilter/*.ipynb_checkpoints
-Projects/P1_ExtendedKalmanFilter/OldVersion
+Projects/P1_ExtendedKalmanFilter/OldVersion/*
 Projects/P1_ExtendedKalmanFilter/term2_sim.app
