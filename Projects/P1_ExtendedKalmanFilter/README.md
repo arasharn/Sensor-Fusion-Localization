@@ -66,13 +66,13 @@ I used three files provided by Udacity to check the error values on in terms of 
 ## Visualizing Results
 
 
-### Udacity simulator and how it works:
-Using the [open-source Udacity simulator](https://github.com/udacity/self-driving-car-sim/releases/) I made a short movie of how my code runs and works on the simulator. Here is the [youtube link]().
+### 1 - Udacity Simulator and How it Works:
+Using the [open-source Udacity simulator](https://github.com/udacity/self-driving-car-sim/releases/) I made a short movie of how my code runs and works on the simulator. Here is the [youtube link](https://youtu.be/ZeU0wolYa1U).
 
 In order to visualize the results with the simulator, first download the app using the link above and clone the repository. I used the Udacity provided python code (**kalman-tracker.py**) to interact with the simulator. To use it first run the simulator in your desired screen size and select Project 1, then open up a terminal in the repository and run **python kalman-tracker.py build/ExtendedKF**. Choose the dataset (1 or 2) and wait for the car to start tracking! :)
 
 
-### Plots for Pedestrian Motion
+### 2 - Plots for Pedestrian Motion
 The python code is provided for the following figures in **KalmanFilter_Visualization.ipynb** file.
 Here are the plots for estimated positions using the designed extended Kalman filter versus the measurement data and ground truth values for all three datasets.
 
