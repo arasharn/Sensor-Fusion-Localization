@@ -27,14 +27,8 @@
 2. Make a build directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
 4. Run it: `./ExtendedKF path/to/input.txt path/to/output.txt`.
- ```
- eg.
- >> ./ExtendedKF ../data/obj_pose-laser-radar-synthetic-input.txt ../data/obj_pose-laser-radar-synthetic-output.txt
->> ./ExtendedKF ../data/sample-laser-radar-measurement-data-1.txt ../data/sample-laser-radar-measurement-data-1-output.txt
->> ./ExtendedKF ../data/sample-laser-radar-measurement-data-2.txt ../data/sample-laser-radar-measurement-data-2-output.txt
-```
 
-<!-- you can apply appropriate changes to run.sh file and execute it. appropriate changes include changing the directory to the cloned folder. run.sh file looks like below:
+you can apply appropriate changes to run.sh file and execute it. appropriate changes include changing the directory to the cloned folder. run.sh file looks like below:
 ```bash
 cd cloned_folder
 mkdir build && cd build
@@ -42,7 +36,7 @@ cmake .. && make
 ./ExtendedKF ../data/obj_pose-laser-radar-synthetic-input.txt ../data/obj_pose-laser-radar-synthetic-output.txt
 ./ExtendedKF ../data/sample-laser-radar-measurement-data-1.txt ../data/sample-laser-radar-measurement-data-1-output.txt
 ./ExtendedKF ../data/sample-laser-radar-measurement-data-2.txt ../data/sample-laser-radar-measurement-data-2-output.txt
-``` -->
+```
 
 ## Results
 I used three files provided by Udacity to check the error values on in terms of RMSE accuracies for x, y, vx, vy. I have also provided a screenshot of my terminal which I have obtained the following results in it. You can find the [screenshot here](https://github.com/SaynaEbrahimi/Udacity-Self-Driving-Car-NanoDegree-Term2-Sensor-Fusion-Localization-and-Control/blob/master/Projects/P1_ExtendedKalmanFilter/Figures/Outputs_Screenshot.png).
