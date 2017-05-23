@@ -39,7 +39,7 @@ cmake .. && make
 ```
 
 ## Results
-I used three files provided by Udacity to check the error values on in terms of RMSE accuracies for x, y, vx, vy:
+I used three files provided by Udacity to check the error values on in terms of RMSE accuracies for x, y, vx, vy. I have also provided a screenshot of my terminal which I have obtained the following results in it. You can find the [screenshot here](https://github.com/SaynaEbrahimi/Udacity-Self-Driving-Car-NanoDegree-Term2-Sensor-Fusion-Localization-and-Control/blob/master/Projects/P1_ExtendedKalmanFilter/Figures/Outputs_Screenshot.png).
 
 ### Dataset1 RMSE (obj_pose-laser-radar-synthetic-input.txt)
 | x   |   0.0972256|
