@@ -1,9 +1,8 @@
 Private/
 /Projects/P1_ExtendedKalmanFilter/*.zip
 /Misc/.ipynb_checkpoints
+/Projects/P1_ExtendedKalmanFilter/*.mp4
 
-*.
-*.out
-Projects/P1_ExtendedKalmanFilter/*.ipynb_checkpoints
+Projects/P1_ExtendedKalmanFilter/.ipynb_checkpoints
 Projects/P1_ExtendedKalmanFilter/OldVersion/*
 Projects/P1_ExtendedKalmanFilter/term2_sim.app
