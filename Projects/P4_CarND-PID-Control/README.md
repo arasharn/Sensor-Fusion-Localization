@@ -7,15 +7,28 @@ In this project go back to the same environment that we used in the Behavioral C
 
 The simulator has been open-sourced by Udacity and can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)
 
+Describe the effect each of the P, I, D components had in your implementation.
+
+Finding kp, ki, kd components in a heuristic way is a research field in control theory. The right way to do it is using root locus analysis and modeling the transfer function behavior. Here, however, I manually tweaked them to get desired maneuver on the track.
+Here are the final values I peaked:
+
+Kp = 0.2
+
+Ki = 1e-4
+
+Kd = 10.0
+
+Kd takes the derivative of the error so choosing a large value for it would make the difference between the error in two consecutive time-steps too large so car starts wiggling around.
+
+Ki takes the integral of the error so making it large, would cause the car to take more time to get back on track.
+
+For tuning Kp, I started from 0.01 and increased it by 0.01 until I reached 0.2. A wrong Kp value would car to zig-zag until it blows up. At too small values, it takes longer to blow up.
+
+Here is a video of my implementation:
 
 
 
-
-
-
-
-
-
+---
 ## Dependencies
 
 * cmake >= 3.5
