@@ -3,7 +3,7 @@
 Implementing a PID Controller in C++ to drive a vehicle in a simulator environment!
 ---
 
-In this project go back to the same environment that we used in the Behavioral Cloning Project in Term 1. This time, however, we finish the driving task using a PID controller! The steering angle is what we compute as the command of action using the cross track error (CTE) and the velocity (mph) reported by the simulator.
+In this project we go back to the same environment that we used in the Behavioral Cloning Project in Term 1. This time, however, we finish the driving task using a PID controller! The steering angle is what we compute as the command of action using the cross track error (CTE) and the velocity (mph) reported by the simulator.
 
 The simulator has been open-sourced by Udacity and can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)
 
@@ -24,7 +24,7 @@ Ki takes the integral of the error so making it large, would cause the car to ta
 
 For tuning Kp, I started from 0.01 and increased it by 0.01 until I reached 0.2. A wrong Kp value would car to zig-zag until it blows up. At too small values, it takes longer to blow up.
 
-Here is [a video of my implementation](https://youtu.be/utynFMySkL4) of how the car successfully pass the track without going to anywhere considered as unsafe!
+Here is [a video of my implementation](https://youtu.be/utynFMySkL4) of how the car successfully passed the track without going to anywhere considered as unsafe!
 
 
 ---
