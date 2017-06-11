@@ -18,12 +18,22 @@ where <code> Lf </code> measures the distance between the front of the vehicle a
 
 
 
-https://youtu.be/sDMrvQArndQ
+
+
+
+
+**Fine-tunning `N` and `dt`:**
+
+`dt` and 'N' should be fine tuned in the implementation. `dt` is the time-step and `N` is the number of time-steps. `N x dt` would define the _horizon_ of the model. Here are the values I chose by trial and error for them: **`N = 8`, `dt = 1e-1`**. Hence, my model makes plans for 0.8 seconds ahead of now. I started off with the given values of `N=25` and `dt=0.05` during the course but realized `dt` was too small so I doubled it to 0.1 (which is in fact the latency of the simulator which I'll discuss in the next paragraph) and started fine-tuning `N`. I first made it larger but longer horizon did not help as the car was not able to stabilize itself. I lowered N by increments of 5 until at `N=10` I saw a major improvement over the maneuvers but yet saw the car was driving poorly in turns. Finally `N=8` did the job and I got my `hyperparameters` tuned (not to be confused by hyperparametrs in deep learning).
+
+**Dealing with Latency:**
+
+In order to deal with the 100 millisecond (0.1 seconds) latency of the simulator, we should set our dt as a multiplier of this latency so that we always know our off-set from the real actuator values. I set `dt = 0.1` so that we can use the second set of received actuations as our current values. I found this approximation of _real_ values instead of _latent_ ones accurate enough for this project.
+
+**Visualization of Results:**
+Here is [a video of my implementation](https://youtu.be/sDMrvQArndQ) of how the car successfully passed the track without going to anywhere considered as unsafe!
 
 The simulator has been open-sourced by Udacity and can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)
-
-
-
 
 
 ## Dependencies
