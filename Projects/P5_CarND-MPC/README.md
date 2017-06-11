@@ -12,7 +12,7 @@ For the actuators, we have reduced them to two only: <code>&delta; </code> for s
 
 Now the model looks like this:
 
-<img src="equations.png">
+<img src="equation.png">
 
 
 
