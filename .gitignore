@@ -13,7 +13,9 @@ Private/
 /Projects/P2-Unscented-Kalman-Filter/*.mov
 /Projects/P2-Unscented-Kalman-Filter/build/
 
-/Projects/P3-
+/Projects/P4_CarND-PID-Control/build
+/Projects/P4_CarND-PID-Control/simulation_P4.mov
 
-
+/Projects/P5_CarND-MPC/simulation_P5.mov
+/Projects/P5_CarND-MPC/build/
 
