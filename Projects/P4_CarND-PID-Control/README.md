@@ -24,7 +24,7 @@ Ki takes the integral of the error so making it large, would cause the car to ta
 
 For tuning Kp, I started from 0.01 and increased it by 0.01 until I reached 0.2. A wrong Kp value would car to zig-zag until it blows up. At too small values, it takes longer to blow up.
 
-Here is [a video of my implementation](https://youtu.be/utynFMySkL4)
+Here is [a video of my implementation](https://youtu.be/utynFMySkL4) of how the car successfully pass the track without going to anywhere considered as unsafe!
 
 
 ---
